@@ -1,0 +1,155 @@
+/* m默认暗色主题 */
+:root {
+  --text-primary: #24292e;
+  --text-secondary: #586069;
+  --border-color: #e1e4e8;
+  --code-bg: #f6f8fa;
+  --inline-code-bg: rgba(27, 31, 35, 0.05);
+  --quote-border: #dfe2e5;
+  --quote-bg: #f6f8fa;
+  --table-bg: #fff;
+  --table-border: #e1e4e8;
+  --table-header-bg: #f6f8fa;
+  --divider-color: #e1e4e8;
+}
+
+[data-theme='dark'] {
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --border-color: #30363d;
+  --code-bg: #161b22;
+  --inline-code-bg: rgba(110, 118, 129, 0.4);
+  --quote-border: #3b434b;
+  --quote-bg: rgba(110, 118, 129, 0.1);
+  --table-bg: #0d1117;
+  --table-border: #30363d;
+  --table-header-bg: #161b22;
+  --divider-color: #21262d;
+}
+
+[data-theme='light'] {
+  --text-primary: #24292e;
+  --text-secondary: #586069;
+  --border-color: #e1e4e8;
+  --code-bg: #f6f8fa;
+  --inline-code-bg: rgba(27, 31, 35, 0.05);
+  --quote-border: #dfe2e5;
+  --quote-bg: #f6f8fa;
+  --table-bg: #fff;
+  --table-border: #e1e4e8;
+  --table-header-bg: #f6f8fa;
+  --divider-color: #e1e4e8;
+}
+
+/* markdown.module.css */
+.markdown-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  overflow-wrap: break-word;
+}
+
+/* 标题层级 */
+.markdown-container h1 {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.3em;
+  margin: 1em 0;
+}
+
+.markdown-container h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+  margin: 0.8em 0;
+}
+
+.markdown-container h3 {
+  font-size: 1.3em;
+}
+
+.markdown-container h4 {
+  font-size: 1.1em;
+}
+
+/* 代码块容器 */
+.markdown-container pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 行内代码 */
+.markdown-container code:not([class*="language-"]) {
+  background: var(--inline-code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Fira Code', Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+/* 语法高亮主题 (示例: VS Dark) */
+.markdown-container code[class*="language-"] {
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: 'Fira Code', Monaco, Consolas, monospace;
+}
+
+/* 行号样式 */
+.markdown-container .react-syntax-highlighter-line-number {
+  color: #666;
+  padding-right: 1em;
+  user-select: none;
+}
+
+/* 有序/无序列表 */
+.markdown-container ul,
+.markdown-container ol {
+  padding-left: 2em;
+  margin: 0.8em 0;
+}
+
+.markdown-container li {
+  margin: 0.4em 0;
+}
+
+/* 引用块 */
+.markdown-container blockquote {
+  border-left: 4px solid var(--quote-border);
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: var(--quote-bg);
+  color: var(--text-secondary);
+  border-radius: 0 4px 4px 0;
+}
+
+/* 表格 */
+.markdown-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: var(--table-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-container th,
+.markdown-container td {
+  padding: 0.8em;
+  border: 1px solid var(--table-border);
+}
+
+.markdown-container th {
+  background: var(--table-header-bg);
+  font-weight: 600;
+}
+
+/* 分割线 */
+.markdown-container hr {
+  border: 0;
+  height: 1px;
+  background: var(--divider-color);
+  margin: 2em 0;
+}
