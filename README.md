@@ -1,4 +1,4 @@
-# Deepseek chat for personal usage
+# 简单的 AI 聊天 UI 交互
 
 # React + TypeScript + Vite + Tailwind css
 
