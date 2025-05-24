@@ -28,7 +28,10 @@ export default function ChatWindow({ messages }: ChatWindowProps) {
             <div className="absolute left-0 h-[60px] text-center w-full top-0 flex items-center justify-center">
                 <strong>会话信息</strong>
             </div>
-            <div className="w-full h-full overflow-y-auto" ref={containerRef}>
+            <div
+                className="w-full h-full overflow-y-auto pb-[40px]"
+                ref={containerRef}
+            >
                 {messages.map((msg, idx) => (
                     <Message
                         key={idx}
